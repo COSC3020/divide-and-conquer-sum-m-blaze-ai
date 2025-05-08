@@ -8,3 +8,4 @@ const test =
         return JSON.stringify(divideAndConquerSum(arr)) == JSON.stringify(arr.reduce(function(a, b) { return a + b; }, 0));
     });
 jsc.assert(test);
+console.log("All tests passed!");
