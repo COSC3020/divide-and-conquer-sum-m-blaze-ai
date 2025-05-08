@@ -25,3 +25,19 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
+
+The divide and conquer sum using three way splitting runs in linear time, $\Theta$(n).
+Since we are splitting into 3 subarrays of n/3, and do constant work, the recurrence relation is T(n) = 3T(n/3) + $\Theta$(1)
+
+Which is similar to the recurrence for merge sort: T(n) = aT(n/b) + $\Theta$(n^d), with:
+a = 3 
+b = 3
+d = 0
+
+Since a = b^d = 3^0 = 1 and a = 3 > 1, we are in Case 1 of the Master Theorem, which gives the the final complexity of $\Theta$(n^(log_3(3))) = $\Theta$(n).
+
+Conclusion: Although the divide and conquer sum uses recursion and has function call overhead, it matches the complexity of a simple iterative sum.
+
+"I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice."
+
+Other Sources Used: Aside from the lecture videos and slides for this class, I consulted Chat GPT for help regarding the recurring issue "Error: Cannot find module 'jsverify'", as well as a recurring issue with ESlint consistently failing.
